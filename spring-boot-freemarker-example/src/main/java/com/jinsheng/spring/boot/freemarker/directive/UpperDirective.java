@@ -12,18 +12,18 @@ import java.util.Map;
  */
 public class UpperDirective implements TemplateDirectiveModel {
     @Override
-    public void execute(Environment environment, Map map, TemplateModel[] templateModels, TemplateDirectiveBody templateDirectiveBody) throws TemplateException, IOException {
-        if (!map.isEmpty()) {
+    public void execute(Environment env, Map params, TemplateModel[] loopVars, TemplateDirectiveBody body) throws TemplateException, IOException {
+        if (!params.isEmpty()) {
             throw new TemplateModelException(
                     "This directive doesn't allow parameters.");
         }
-        if (templateModels.length != 0) {
+        if (loopVars.length != 0) {
             throw new TemplateModelException(
                     "This directive doesn't allow loop variables.");
         }
 
-        if (templateDirectiveBody != null) {
-            templateDirectiveBody.render(new UpperCaseFilterWriter(environment.getOut()));
+        if (body != null) {
+            body.render(new UpperCaseFilterWriter(env.getOut()));
         } else {
             throw new RuntimeException("missing body");
         }

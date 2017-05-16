@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author jinsheng
  */
 @Controller
-public class FreemarkerController {
+public class FreeMarkerController {
     @RequestMapping("/built-in")
     public String builtIn() {
         return "built_in";
