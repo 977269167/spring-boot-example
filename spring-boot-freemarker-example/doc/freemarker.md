@@ -11,29 +11,19 @@ The starters contain a lot of the dependencies that you need to get a project up
 ## pom
 
 ```java
-	<parent> 
-		<groupId>org.springframework.boot</groupId> 
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>${spring.boot.version}</version> 
-	</parent>
-	<dependency>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-freemarker</artifactId>
-		<version>${spring.boot.version}</version>
-	</dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-freemarker</artifactId>
+        <version>${spring.boot.version}</version>
+    </dependency>
 
 ```
 
 ## WebApplication
 
 ```java
-	@SpringBootApplication
-    public class WebApplication extends SpringBootServletInitializer {
-        @Override
-        protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-            return application.sources(WebApplication.class);
-        }
-    
+    @SpringBootApplication
+    public class WebApplication {
         public static void main(String[] args) throws Exception {
             SpringApplication.run(WebApplication.class, args);
         }

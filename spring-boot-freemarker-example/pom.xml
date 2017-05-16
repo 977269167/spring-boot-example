@@ -10,10 +10,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>spring-boot-freemarker-example</artifactId>
 
-    <properties>
-        <google.guava.version>21.0</google.guava.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -22,7 +18,6 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>${google.guava.version}</version>
         </dependency>
     </dependencies>
 
